@@ -15,7 +15,7 @@ import './app.css';
 export default class App extends Component {
 
   // https://coursehunters.net/course/react-redux-professionalnaya-razrabotka
-  // 90 is done;
+  // 93 is done;
   // this 140 applicationCache.js
 
   state = {
