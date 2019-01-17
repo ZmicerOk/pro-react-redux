@@ -11,11 +11,12 @@ import { PeoplePage, PlanetsPage, StarshipsPage } from '../pages';
 import { SwapiServiceProvider } from '../swapi-service-context';
 
 import './app.css';
+import { StarshipDetails } from '../sw-components';
 
 export default class App extends Component {
 
   // https://coursehunters.net/course/react-redux-professionalnaya-razrabotka
-  // 97 Route is done;
+  // 100 Route is done;
   // this 140 applicationCache.js
 
   state = {
@@ -48,8 +49,13 @@ export default class App extends Component {
                     exact={true}/>
               <Route path="/people" component={PeoplePage} />
               <Route path="/planets" component={PlanetsPage} />
-              <Route path="/starships" component={StarshipsPage} />
-
+              <Route path="/starships" exact component={StarshipsPage} />
+              <Route path="/starships/:id"
+               render={({match})=>{
+                 const {id}=match.params;
+             
+               return <StarshipDetails itemId={id}/>
+              }} />
             </div>
           </Router>
         </SwapiServiceProvider>
