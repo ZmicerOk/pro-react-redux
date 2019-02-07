@@ -21,7 +21,7 @@ import { StarshipDetails } from "../sw-components";
 
 export default class App extends Component {
   // https://coursehunters.net/course/react-redux-professionalnaya-razrabotka
-  // coursehunters -u https://coursehunters.net/course/react-redux-professionalnaya-razrabotka  -l 118-129
+  // coursehunters -u https://coursehunters.net/course/react-redux-professionalnaya-razrabotka  -l 130-133
   // 102 Авторизация и закрытые страницы
   // this 140 applicationCache.js
 
