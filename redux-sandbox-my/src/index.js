@@ -1,25 +1,19 @@
-import {createStore, bindActionCreators} from "redux";
-import {reducer} from './reducer';
-import *as actions from './actions';
+import React from "react";
+import ReactDOM from "react-dom";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import App from "./components/app";
+import reducer from "./reducer";
+
 // const initialState = 0;
-//113 bindActionCreators
-//114 Использование React и Redux
+//104---117
+//115 reactredux и функция connect
 
-const store = createStore(reducer),
-      {dispatch} = store,
-      //bindActionCreator = (creator, dispatch) => (...args) => {dispatch(creator(...args))},
-      {inc, dec, rnd} = bindActionCreators(actions, dispatch);
+const store = createStore(reducer);
 
-document.getElementById('inc').addEventListener('click', inc);
-document.getElementById('dec').addEventListener('click', dec);
-document.getElementById('rnd').addEventListener('click', ()=>{
-    const payload = Math.floor(Math.random()*10);
-    rnd(payload);
-    });
-
-
-const update = () => {
-document.getElementById('counter').innerHTML=store.getState();
-};
-
-store.subscribe(update);
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("root")
+);
