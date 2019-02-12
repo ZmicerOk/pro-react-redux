@@ -12,4 +12,9 @@ const Counter = ({counter, inc, dec, rnd}) => {
     );
 };
 
-export default Counter;
+const mapStateToProps = (state) => {
+    return {
+        counter: state
+    }
+};
+export default connect(mapStateToProps)(Counter);

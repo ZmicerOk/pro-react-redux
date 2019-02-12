@@ -7,7 +7,7 @@ import reducer from "./reducer";
 
 // const initialState = 0;
 //104---117
-//115 reactredux и функция connect
+//115 reactredux и функция connect done
 
 const store = createStore(reducer);
 
