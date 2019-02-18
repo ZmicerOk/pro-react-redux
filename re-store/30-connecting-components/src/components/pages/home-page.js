@@ -3,7 +3,7 @@ import BookList from '../book-list';
 
 const HomePage = () => {
   return (
-    <BookList />
+    <BookList books={[]}/>
   );
 };
 
