@@ -6,6 +6,7 @@ import './app.css';
 const App = () => {
     
     return (
+      <main role="main" className='container'>
     <Switch>
         <Route
         path="/"
@@ -18,7 +19,7 @@ const App = () => {
       />
         
     </Switch>
-    // <div>App</div>
+      </main>
     )
 };
 
